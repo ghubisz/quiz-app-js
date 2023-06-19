@@ -2,36 +2,36 @@ const questions = [
     {
         question: "Which is the largest animal in the world?",
         answers: [
-            { text: "Shark", coorect: false},
-            { text: "Blue whale", coorect:true},
-            { text: "Elephant", coorect: false},
+            { text: "Shark", correct: false},
+            { text: "Blue whale", correct:true},
+            { text: "Elephant", correct: false},
             { text: "Giraffe", correct: false},
         ]
     },
     {
-        question: "Which is the largest animal in the world?",
+        question: "Which is the smallest country in the world?",
         answers: [
-            { text: "Shark", corect: false},
-            { text: "Blue whale", corect:true},
-            { text: "Elephant", corect: false},
-            { text: "Giraffe", correct: false},
+            { text: "Vatican City", correct: true},
+            { text: "Bhutan", correct: false},
+            { text: "Nepal", correct: false},
+            { text: "Sri Lanka", correct: false},
         ]
     },
     {
         question: "Which is the largest desert in the world?",
         answers: [
-            { text: "Kalahari", corect: false},
-            { text: "Gobi", corect:true},
-            { text: "Sahara", corect: false},
+            { text: "Kalahari", correct: false},
+            { text: "Gobi", correct:true},
+            { text: "Sahara", correct: false},
             { text: "Antarctica", correct: true},
         ]
     },
     {
         question: "Which is the smallest continent in the world?",
         answers: [
-            { text: "Asia", corect: false},
-            { text: "Australia", corect:true},
-            { text: "Arctic", corect: false},
+            { text: "Asia", correct: false},
+            { text: "Australia", correct: true},
+            { text: "Arctic", correct: false},
             { text: "Africa", correct: false},
         ]
     }
@@ -49,4 +49,9 @@ function startQuiz(){
     score = 0;
     nextButton.innerHTML = "Next";
     showQuestion();
+}
+function showQuestion(){
+    let currentQuestion = questions[currentQuestionIndex];
+    let questionNo = currentQuestionIndex + 1;
+    questionElement.innerHTML = questionNo + ". " +currentQuestion.question;
 }
